@@ -95,6 +95,8 @@
         }
     },
     "require-dev": {
+        "behat/mink-goutte-driver": "^2.0",
+        "drupal/drupal-extension": "^5.0",
         "drush/drush": "^12.4"
     }
 }

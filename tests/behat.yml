@@ -1,0 +1,21 @@
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - Drupal\DrupalExtension\Context\DrushContext
+  extensions:
+    Behat\MinkExtension:
+      goutte: ~
+      base_url: 'https://d10.ddev.site/'
+    Drupal\DrupalExtension:
+      blackbox: ~
+      # api_driver: 'drush'
+      # drush:
+      #   alias: 'd10.ddev.site'
+      #   binary: '%paths.base%/../vendor/bin/drush'
+        # alias: '%env(BEHAT_DRUSH_ALIAS)%'
+        # binary: '%paths.base%/../../vendor/drush/drush/drush'
